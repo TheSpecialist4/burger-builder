@@ -21,11 +21,21 @@ class BurgerBuilder extends Component {
         this.setState({ ingredients: newIngs });
     }
 
+    removeIngredientHandler = (type) => {
+        if (this.state.ingredients[type] > 0) {
+            const newIngValue = this.state.ingredients[type] - 1;
+            let newIngs = {...this.state.ingredients};
+            newIngs[type] = newIngValue;
+            this.setState({ ingredients: newIngs });
+        }
+    }
+
     render() {
         return (
             <React.Fragment>
                 <Burger ingredients={this.state.ingredients}/>
-                <BuildControls addIngredient={this.addIngredientHandler} />
+                <BuildControls addIngredient={this.addIngredientHandler}
+                    removeIngredient={this.removeIngredientHandler} />
             </React.Fragment>
         );
     }
