@@ -17,10 +17,10 @@ const buildControls = (props) => {
                 console.log(ctrl.type);
                 return (
                     <BuildControl 
-                    key={ctrl.label} 
-                    label={ctrl.label}
-                    addIngredient={() => props.addIngredient(ctrl.type)}
-                    removeIngredient={() => props.removeIngredient(ctrl.type)} />
+                        key={ctrl.label} 
+                        label={ctrl.label}
+                        addIngredient={() => props.addIngredient(ctrl.type)}
+                        removeIngredient={() => props.removeIngredient(ctrl.type)} />
                 );
             }
             )}
