@@ -69,7 +69,9 @@ class BurgerBuilder extends Component {
                 <p className={classes.Price}>The price of the burger is <strong>${this.state.totalPrice.toFixed(2)}</strong></p>
                 <BuildControls addIngredient={this.addIngredientHandler}
                     removeIngredient={this.removeIngredientHandler}
-                    isPurchasable={this.state.isPurchasable} />
+                    isPurchasable={this.state.isPurchasable}
+                    ingredients={this.state.ingredients}
+                    totalPrice={this.state.totalPrice} />
             </React.Fragment>
         );
     }
