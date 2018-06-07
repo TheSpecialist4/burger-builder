@@ -45,6 +45,7 @@ const buildControls = (props) => {
                             Checkout</Button>}>
                 <ui>{ingsSummary}</ui>
                 <p style={{ textAlign: 'center', fontSize: '1.2rem' }}>The total price is <strong>${props.totalPrice.toFixed(2)}</strong></p>
+                <Button>Ok</Button>
             </Modal>
         </div>
     );
